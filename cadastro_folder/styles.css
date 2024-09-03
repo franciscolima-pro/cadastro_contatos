@@ -1,0 +1,70 @@
+:root{
+    --gray: #6b6b6b;
+    --blue: #078ed0;
+    --blueButton: #53B6E6;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: "Noto Sans", sans-serif;
+    header{
+        background: var(--blue);
+        h1 {
+            color: white;
+            font-weight: 600;
+        }
+    }
+}
+
+form{
+    color: var(--gray);
+    .eachDivInput{
+        position: relative;
+        input{
+            width: 100%;
+            margin: 25px 0;
+            padding-bottom: 10px;
+            border: 0;
+            border-bottom: 1px solid var(--gray);
+            background-color: transparent; /* Fundo transparente */
+            outline: none;
+            &:focus{
+                border-bottom: 2px solid var(--blue); /* Aumenta a espessura da borda e muda a cor ao focar */
+                ~.form-label{
+                    transition: 0.2s;
+                    color:var(--blue);
+                }
+            }
+          }
+        .form-label{
+          position: absolute;
+          top: 0;
+          display: block;
+          font-weight: 500;
+        }
+    }
+    #cadastrarButton{
+        background-color: var(--blueButton);
+        color: white;
+        &:hover{
+            background-color: var(--blue);
+        }
+    }
+}
+
+table{
+    tbody{
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    }
+} 
+
+footer {
+    background-color: var(--blue);
+    color: white;
+    #logoFooter{
+        max-width: 100px; /* Ajuste o tamanho máximo do logo */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
