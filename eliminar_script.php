@@ -11,11 +11,15 @@
 
     //Recebendo os meus valores do index/formulário. Para exclusão preciso apenas desses dois
     $id = $_POST["id"];
-    $nome = $_POST["nome"] ;
+    //$nome = $_POST["nome"];
 
     $sql = "DELETE FROM `contatos` WHERE id = '$id'"; //só precisa do id pra excluir.
      //Enviando os dados para o meu BD
-    mysqli_query($conex, $sql)
+     if(mysqli_query($conex, $sql)){
+        echo "Cadastro excluído com sucesso!";
+   }else{
+       echo "Erro ao excluir";
+   };
     // aqui deve-se passar 2 parâmetros aconexão e o tipo de comando, no caso sql. 
 ?>
 </body>

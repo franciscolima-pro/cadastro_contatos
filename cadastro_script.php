@@ -7,9 +7,7 @@
 </head>
 <body>
 <?php
-    echo '<pre>';
-    print_r($_POST);
-    echo '</pre>';
+
 
     include "conexao.php"; //De onde vem os dados
 
@@ -28,19 +26,19 @@
 
         //Armazenando/validando os dados recebidos
         if(empty($nome) || empty($nascimento) || empty($email) || empty($profissao) || empty($telefone) || empty($celular)){
-            echo "Cadastro não efetuado ⚠. <p>Por favor preencha todas as informações!</p>";}
+            /*echo "Cadastro não efetuado ⚠. <p>Por favor preencha todas as informações!</p>";*/}
         else{
             $sql = "INSERT INTO `contatos`(`nome`, `nascimento`, `email`, `profissao`, `telefone`, `celular`, `notificacao_sms`, `whatsapp`, `notificacao_email`) VALUES ('$nome','$nascimento','$email','$profissao','$telefone','$celular','$whatsapp','$notificacao_email','$notificacao_sms')"; //instrução que peguei do mysqladmin, o 'id' não é necessário, pois o banco de dados vai gerar autoincrement.
 
                 //Enviando os dados para o meu BD
                 if (mysqli_query($conex, $sql)) {
-                    echo "$nome cadastrado com sucesso!";
+                    //echo "$nome cadastrado com sucesso!";
                 } else {
-                    echo "Erro ao cadastrar: " . mysqli_error($conex);
+                    //echo "Erro ao cadastrar: " . mysqli_error($conex);
                 };
         };
     }else{
-        echo "Nenhum dado foi enviado";
+        //echo "Nenhum dado foi enviado";
     } // aqui deve-se passar 2 parâmetros a conexão e o tipo de comando, no caso sql. 
 ?>   
 </body>
