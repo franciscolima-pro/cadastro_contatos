@@ -105,11 +105,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 
-
-
-
-
-
     <!--PÁGINA DE CADASTRO-->
     <header class="d-flex align-items-center">
         <img class="" src="./assets/logo_alphacode.png" alt="logoHeader">
@@ -228,9 +223,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </tbody>
             </table>
         </div> 
-        
 
-  
         
         <!-- Modal de excluir -->
        <div class="modal fade" id="eliminarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -246,9 +239,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                </div>
                <div class="modal-footer">
                <button type="submit" class="btn btn-secondary" id="confirmar-exclusao" data-bs-dismiss="modal" >Sim</button>
-               <button type="button" class="btn btn-primary">Não</button>
-               <input type="hidden" name="id" id="identi" value=""><!--Esse input envia o id da pessoa, para podermos excluir-->
-               <input type="hidden" name="nom" id="nomex" value=""><!--Esse input envia o nome da pessoa, para podermos identificar e excluir-->
+               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Não</button>
+               <input type="hidden" name="id" id="identi" value="">
+               <input type="hidden" name="nom" id="nomex" value="">
                </div>
                </form>
            </div>
@@ -279,13 +272,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <div class="text-center">©Alphacode IT Solutions 2022</div>
     </footer>
-    
 
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Custom JS 
-    <script src="scripts.js"></script>-->
+    
+    <!-- <script src="scripts.js"></script> -->
     
 </body>
 </html>
